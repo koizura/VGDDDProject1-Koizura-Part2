@@ -48,10 +48,12 @@ public class EnemySpawner : MonoBehaviour
             float zVal = m_Bounds.z / 2;
             Vector3 spawnPos = new Vector3(
                 Random.Range(-xVal, xVal),
-                Random.Range(-yVal, yVal),
+                5,
                 Random.Range(-zVal, zVal));
             spawnPos += transform.position;
-            Instantiate(info.EnemyGO, spawnPos, Quaternion.identity);
+            GameObject obj = Instantiate(info.EnemyGO);
+            obj.transform.position = spawnPos;
+
             if (!alwaysSpawn)
             {
                 i++;

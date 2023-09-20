@@ -28,7 +28,10 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene("Arena");
     }
-
+    public void PlayArena2()
+    {
+        SceneManager.LoadScene("Arena 2");
+    }
     public void Quit()
     {
         Application.Quit();
